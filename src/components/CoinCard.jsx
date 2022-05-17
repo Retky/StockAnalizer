@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 const CoinCard = (props) => {
@@ -9,14 +10,14 @@ const CoinCard = (props) => {
   } = props;
 
   return (
-    <div className="card">
+    <NavLink className="card" to="/detail">
       <h2>{symbol}</h2>
       <small>{id}</small>
       <p>
         $
         {price}
       </p>
-    </div>
+    </NavLink>
   );
 };
 
