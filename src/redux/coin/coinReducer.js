@@ -1,18 +1,23 @@
 const apiCoin = 'https://api.coincap.io/v2/assets';
+const mainList = '?limit=11';
 
 const FETCHCOINS = 'FETCHCOINS';
 const initialState = [];
 
-let store = false;
-export const fetchCoins = () => async (dispatch) => {
-  const get = await fetch(`${apiCoin}?.limit=11`);
-  const newState = await get.json();
-  if (store) return;
+const fetchCoins = async () => {
+  const get = await fetch(apiCoin + mainList, { method: 'GET' });
+  const coins = await get.json();
+  return coins;
+};
+
+fetchCoins().then((loo) => console.log(loo.data));
+
+export const coinList = () => async (dispatch) => {
+  const coins = await fetchCoins();
   dispatch({
     type: FETCHCOINS,
-    newState,
+    newState: coins.data,
   });
-  store = true;
 };
 
 const reducer = (state = initialState, action) => {
