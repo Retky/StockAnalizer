@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+}
+
+header {
+  box-sizing: border-box;
+  position: fixed;
+  width: 100vw;
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #4369b2;
+  color: #fff;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+h1 {
+  margin: 0;
+}
+
+section {
+  padding-top: 50px;
+  box-sizing: border-box;
+  height: 100vh;
+  background: #4166ac;
+  color: #fff;
+}
