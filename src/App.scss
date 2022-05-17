@@ -3,7 +3,9 @@ body {
 }
 
 header {
-  border: solid goldenrod 1px;
+  box-sizing: border-box;
+  position: fixed;
+  width: 100vw;
   padding: 5px 10px;
   display: flex;
   justify-content: space-between;
@@ -19,4 +21,12 @@ header {
 
 h1 {
   margin: 0;
+}
+
+section {
+  padding-top: 50px;
+  box-sizing: border-box;
+  height: 100vh;
+  background: #4166ac;
+  color: #fff;
 }
