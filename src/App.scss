@@ -26,7 +26,31 @@ h1 {
 section {
   padding-top: 50px;
   box-sizing: border-box;
-  height: 100vh;
-  background: #4166ac;
+  min-height: 100vh;
+  background: #4369b2;
   color: #fff;
+}
+
+.coinList {
+  box-sizing: border-box;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  text-align: center;
+}
+
+.card {
+  h2 {
+    margin-bottom: 0;
+  }
+}
+
+.card:nth-child(4n),
+.card:nth-child(4n+3) {
+  background: #3f63a6;
+}
+
+.card:first-child {
+  background: #5789e6;
+  grid-column: 1/3;
 }
