@@ -1,22 +1,37 @@
 const apiCoin = 'https://api.coincap.io/v2/assets';
-const mainList = '?limit=11';
+const mainList = '?limit=100';
 
 const FETCHCOINS = 'FETCHCOINS';
+const FILTERCOINS = 'FILTERCOINS';
 const initialState = [];
 
 const fetchCoins = async () => {
   const get = await fetch(apiCoin + mainList, { method: 'GET' });
-  const coins = await get.json();
+  const toJs = await get.json();
+  const coins = toJs.data;
   return coins;
 };
 
-fetchCoins().then((loo) => console.log(loo.data));
-
 export const coinList = () => async (dispatch) => {
   const coins = await fetchCoins();
+  const firstCoins = coins.slice(0, 11);
   dispatch({
     type: FETCHCOINS,
-    newState: coins.data,
+    newState: firstCoins,
+  });
+};
+
+export const coinFilter = (filter) => async (dispatch) => {
+  const coins = await fetchCoins();
+  if (filter === 'name') {
+    coins.sort((a, b) => a.name.localeCompare(b.name));
+  } else if (filter === 'vol') {
+    coins.sort((a, b) => b.volumeUsd24Hr - a.volumeUsd24Hr);
+  }
+  const firstCoins = coins.slice(0, 11);
+  dispatch({
+    type: FILTERCOINS,
+    filterState: firstCoins,
   });
 };
 
@@ -24,6 +39,8 @@ const reducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCHCOINS:
       return action.newState;
+    case FILTERCOINS:
+      return action.filterState;
     default:
       return state;
   }

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { coinList } from '../redux/coin/coinReducer';
+import { coinList, coinFilter } from '../redux/coin/coinReducer';
 import CoinCard from './CoinCard';
 
 const Main = () => {
@@ -10,12 +10,17 @@ const Main = () => {
     dispatch(coinList());
   }, []);
 
+  const changeHandler = (e) => {
+    dispatch(coinFilter(e.target.value));
+    console.log(e.target.value);
+  };
+
   return (
     <section>
-      <select className="filter">
+      <select className="filter" onChange={changeHandler}>
         <option value="price"> Price </option>
         <option value="name"> Name </option>
-        <option value="vwap"> 24h% </option>
+        <option value="vol"> 24h% </option>
       </select>
       <ul className="coinList">
         {cList.map((coin) => (
