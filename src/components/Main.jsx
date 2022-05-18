@@ -12,6 +12,11 @@ const Main = () => {
 
   return (
     <section>
+      <select className="filter">
+        <option value="price"> Price </option>
+        <option value="name"> Name </option>
+        <option value="vwap"> 24h% </option>
+      </select>
       <ul className="coinList">
         {cList.map((coin) => (
           <CoinCard
