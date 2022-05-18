@@ -14,7 +14,7 @@ const fetchCoins = async () => {
 
 export const coinList = () => async (dispatch) => {
   const coins = await fetchCoins();
-  const firstCoins = coins.slice(0, 11);
+  const firstCoins = coins.slice(0, 51);
   dispatch({
     type: FETCHCOINS,
     newState: firstCoins,
@@ -28,7 +28,7 @@ export const coinFilter = (filter) => async (dispatch) => {
   } else if (filter === 'vol') {
     coins.sort((a, b) => b.volumeUsd24Hr - a.volumeUsd24Hr);
   }
-  const firstCoins = coins.slice(0, 11);
+  const firstCoins = coins.slice(0, 51);
   dispatch({
     type: FILTERCOINS,
     filterState: firstCoins,
