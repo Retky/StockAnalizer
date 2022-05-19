@@ -9,8 +9,6 @@ const fetchDetail = async (id) => {
   return coins;
 };
 
-fetchDetail('bitcoin').then((loo) => console.log(loo));
-
 export const coinDetail = (id) => async (dispatch) => {
   const cDetail = await fetchDetail(id);
   dispatch({

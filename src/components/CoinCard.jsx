@@ -13,7 +13,6 @@ const CoinCard = (props) => {
   } = props;
 
   const clickHandler = (id) => {
-    console.log('click', id);
     dispatch(coinDetail(id));
   };
 

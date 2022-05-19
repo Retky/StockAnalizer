@@ -12,7 +12,6 @@ const Main = () => {
 
   const changeHandler = (e) => {
     dispatch(coinFilter(e.target.value));
-    console.log(e.target.value);
   };
 
   return (
