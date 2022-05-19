@@ -1,5 +1,9 @@
+@import url('http://fonts.cdnfonts.com/css/gill-sans');
+
 body {
   margin: 0;
+  font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
+  font-weight: lighter;
 }
 
 header {
@@ -21,6 +25,7 @@ header {
 
 h1 {
   margin: 0;
+  font-weight: 100;
 }
 
 section {
@@ -46,6 +51,7 @@ section {
 
   h2 {
     margin-bottom: 0;
+    font-weight: bold;
   }
 }
 
@@ -77,6 +83,7 @@ section {
 
   div {
     height: 50px;
+    
   }
 
   div:nth-child(2n) {

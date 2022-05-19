@@ -22,35 +22,43 @@ const Detail = () => {
       </div>
       <div className="detailList">
         <div>
-          Rank
+          <p>Rank</p>
         </div>
         <div>
-          {' #'}
-          {coin.rank}
+          <p>
+            {' #'}
+            {coin.rank}
+          </p>
         </div>
         <div className="dark">
-          Price
+          <p>Price</p>
         </div>
         <div className="dark">
-          {' $'}
-          {coin.priceUsd}
-          {' USD'}
+          <p>
+            {' $'}
+            {coin.priceUsd}
+            {' USD'}
+          </p>
         </div>
         <div>
-          Volume 24h
+          <p>Volume 24h</p>
         </div>
         <div>
-          {' $'}
-          {coin.volumeUsd24Hr}
+          <p>
+            {' $'}
+            {coin.volumeUsd24Hr}
+          </p>
         </div>
         <div className="dark">
-          Total Supply
+          <p>Total Supply</p>
         </div>
         <div className="dark">
-          {' '}
-          {coin.supply}
-          {' '}
-          {coin.symbol}
+          <p>
+            {' '}
+            {coin.supply.substring(0, 25)}
+            {' '}
+            {coin.symbol}
+          </p>
         </div>
       </div>
     </section>
