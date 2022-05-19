@@ -55,7 +55,7 @@ const Detail = () => {
         <div className="dark">
           <p>
             {' '}
-            {coin.supply.substring(0, 25)}
+            {coin.supply}
             {' '}
             {coin.symbol}
           </p>
