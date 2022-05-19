@@ -1,11 +1,17 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
-import { NavLink } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { NavLink, useParams } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleLeft } from '@fortawesome/free-regular-svg-icons';
+import { coinDetail } from '../redux/coin/detailReducer';
 
 const Detail = () => {
+  const { id } = useParams();
+  const dispatch = useDispatch();
   const coin = useSelector((store) => store.detail);
+  useEffect(() => {
+    dispatch(coinDetail(id));
+  }, []);
 
   return (
     <section>
