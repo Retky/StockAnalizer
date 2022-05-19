@@ -10,7 +10,7 @@ const Detail = () => {
   return (
     <section>
       <NavLink to="/">
-        <FontAwesomeIcon icon={faCircleLeft} size="2x" className="back" />
+        <FontAwesomeIcon icon={faCircleLeft} size="xl" className="back" />
       </NavLink>
 
       <div className="detail">
