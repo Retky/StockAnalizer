@@ -1,14 +1,16 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCircleLeft } from '@fortawesome/free-regular-svg-icons';
 
 const Detail = () => {
   const coin = useSelector((store) => store.detail);
 
   return (
     <section>
-      <NavLink className="back" to="/">
-        Back
+      <NavLink to="/">
+        <FontAwesomeIcon icon={faCircleLeft} size="2x" className="back" />
       </NavLink>
 
       <div className="detail">
