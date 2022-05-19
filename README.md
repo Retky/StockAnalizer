@@ -59,7 +59,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 - Original design idea by [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio).
-- [Financial modeling prep API](https://financialmodelingprep.com/developer/docs/): stock data.
+- [CoinCap API](https://docs.coincap.io/): stock data.
 
 ## 📝 License
 
