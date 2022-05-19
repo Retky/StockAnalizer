@@ -26,7 +26,7 @@ export const coinFilter = (filter) => async (dispatch) => {
   if (filter === 'name') {
     coins.sort((a, b) => a.name.localeCompare(b.name));
   } else if (filter === 'vol') {
-    coins.sort((a, b) => b.volumeUsd24Hr - a.volumeUsd24Hr);
+    coins.sort((a, b) => b.priceUsd - a.priceUsd);
   }
   const firstCoins = coins.slice(0, 51);
   dispatch({

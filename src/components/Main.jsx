@@ -17,9 +17,9 @@ const Main = () => {
   return (
     <section>
       <select className="filter" onChange={changeHandler}>
-        <option value="price"> Price </option>
+        <option value="price"> Rank </option>
         <option value="name"> Name </option>
-        <option value="vol"> 24h% </option>
+        <option value="vol"> Price </option>
       </select>
       <ul className="coinList">
         {cList.map((coin) => (
