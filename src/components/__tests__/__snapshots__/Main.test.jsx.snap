@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Main component component match with the snapshot 1`] = `
+<section>
+  <select
+    className="filter"
+    onChange={[Function]}
+  >
+    <option
+      value="price"
+    >
+       Price 
+    </option>
+    <option
+      value="name"
+    >
+       Name 
+    </option>
+    <option
+      value="vol"
+    >
+       24h% 
+    </option>
+  </select>
+  <ul
+    className="coinList"
+  />
+</section>
+`;

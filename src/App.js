@@ -7,6 +7,7 @@ import {
 import './App.scss';
 import Nav from './components/Nav';
 import Main from './components/Main';
+import Detail from './components/Detail';
 
 const App = () => (
   <div>
@@ -14,6 +15,7 @@ const App = () => (
       <Nav />
       <Routes>
         <Route path="/" element={<Main />} />
+        <Route path="/detail" element={<Detail />} />
       </Routes>
     </Router>
   </div>
