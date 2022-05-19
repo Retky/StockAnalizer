@@ -17,7 +17,7 @@ const CoinCard = (props) => {
   };
 
   return (
-    <NavLink className="card" to="/detail" onClick={() => { clickHandler(id); }}>
+    <NavLink className="card" to={`/detail/${id}`} onClick={() => { clickHandler(id); }}>
       <h2>{symbol}</h2>
       <small>{id}</small>
       <p>
