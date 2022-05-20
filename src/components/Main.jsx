@@ -14,13 +14,24 @@ const Main = () => {
     dispatch(coinFilter(e.target.value));
   };
 
+  const searchHandler = (e) => {
+    e.preventDefault();
+    window.location.href = `/detail/${e.target.coinSearch.value}`;
+  };
+
   return (
     <section>
-      <select className="filter" onChange={changeHandler}>
-        <option value="price"> Rank </option>
-        <option value="name"> Name </option>
-        <option value="vol"> Price </option>
-      </select>
+      <div className="infos">
+        <select className="filter" onChange={changeHandler}>
+          <option value="price"> Rank </option>
+          <option value="name"> Name </option>
+          <option value="vol"> Price </option>
+        </select>
+        <form onSubmit={searchHandler}>
+          <input type="text" name="coinSearch" placeholder="Crypto coin name" required />
+          <input type="submit" value="Search" />
+        </form>
+      </div>
       <ul className="coinList">
         {cList.map((coin) => (
           <CoinCard
