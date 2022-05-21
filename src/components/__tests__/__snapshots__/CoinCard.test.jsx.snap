@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CoinCard component component match with the snapshot 1`] = `
+<a
+  className="card"
+  href="/detail"
+  onClick={[Function]}
+>
+  <h2>
+    BTC
+  </h2>
+  <small>
+    bitcoin
+  </small>
+  <p>
+    $
+    29067.86
+  </p>
+</a>
+`;
