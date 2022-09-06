@@ -1,5 +1,5 @@
 # StockAnalizer
-> Web application for checking stock market information.
+> Web application for checking stock market information from an official API to allow users see the current price, the volume the las 24 hours and the totap supply.
 
 ## Preview
 [![image](https://user-images.githubusercontent.com/93499010/169303913-4d361fd9-1604-47fa-b84f-b79addcd56ff.png)](https://stock-analizer.netlify.app/)
